@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{% block title %}<title>Music World!</title>{% endblock %}
+</head>
+<body>
+	<div>
+    <h1>Music world!</h1>
+    <p>Welcome to the music world!</p>
+    <h2>Music library content</h2>
+    <p>The music band library has the following record counts:</p>
+      <ul>
+        <li><strong>Bands:</strong> {{ num_bands }}</li>
+        <li><strong>Musicians:</strong> {{ num_musicians }}</li>
+        <li><strong>Music genres:</strong> {{ num_genres }}</li>
+        <li><strong>Musical instruments:</strong> {{ num_instruments }}</li>
+     </ul>
+	</div>
+</body>
+</html>
