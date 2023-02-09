@@ -17,6 +17,7 @@ class Country(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
     class Meta:
+        verbose_name_plural = "countries"
         ordering = ["name"]
 
     def __str__(self):
@@ -54,4 +55,4 @@ class Band(models.Model):
         ordering = ["name"]
 
     def __str__(self):
-        return f"{self.name} form {self.country}. ({self.description})"
+        return f"{self.name} form {self.country}"
