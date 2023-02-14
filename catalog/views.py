@@ -44,6 +44,7 @@ class InstrumentListView(generic.ListView):
 
 class MusicianListView(generic.ListView):
     model = Musician
+    queryset = Musician.objects.all().select_related("instrument")
 
 
 class BandListView(generic.ListView):
