@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Instrument List</h1>
+
+	{% if instrument_list %}
+		<ul>
+			{% for instrument in  instrument_list %}
+				<li>{{ instrument }}</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>There are no instruments in library!</p>
+	{% endif %}
+{% endblock %}

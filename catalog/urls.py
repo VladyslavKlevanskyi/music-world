@@ -2,7 +2,8 @@ from django.urls import path
 from catalog.views import (
     index,
     GenreListView,
-    CountryListView
+    CountryListView,
+    InstrumentListView
 )
 
 urlpatterns = [
@@ -16,6 +17,11 @@ urlpatterns = [
         "countries/",
         CountryListView.as_view(),
         name="country-list-view"
+    ),
+    path(
+        "instruments/",
+        InstrumentListView.as_view(),
+        name="instrument-list-view"
     ),
 ]
 
