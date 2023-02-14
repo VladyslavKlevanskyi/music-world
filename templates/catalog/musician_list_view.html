@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Musician List</h1>
+
+	{% if musician_list %}
+		<ul>
+			{% for musician in  musician_list %}
+				<li>
+					<a href="#">{{ musician }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>There are no musicians in library!</p>
+	{% endif %}
+{% endblock %}

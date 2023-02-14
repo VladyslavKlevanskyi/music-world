@@ -1,7 +1,7 @@
 <ul>
 	<li><a href="{% url 'catalog:index' %}">Home</a></li>
 	<li><a href="#">Bands</a></li>
-	<li><a href="#">Musicians</a></li>
+	<li><a href="{% url 'catalog:musician-list-view' %}">Musicians</a></li>
 	<li><a href="{% url 'catalog:instrument-list-view' %}">Instruments</a></li>
 	<li><a href="{% url 'catalog:genre-list-view' %}">Genres</a></li>
 	<li><a href="{% url 'catalog:country-list-view' %}">Countries</a></li>

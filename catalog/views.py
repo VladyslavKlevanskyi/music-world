@@ -43,3 +43,8 @@ class CountryListView(generic.ListView):
 class InstrumentListView(generic.ListView):
     model = Instrument
     template_name = "catalog/instrument_list_view.html"
+
+
+class MusicianListView(generic.ListView):
+    model = Musician
+    template_name = "catalog/musician_list_view.html"
