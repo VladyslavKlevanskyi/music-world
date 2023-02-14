@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import generic
 
 from catalog.models import Band, Musician, Genre, Instrument
 
@@ -21,3 +22,8 @@ def index(request):
     }
 
     return render(request, "catalog/index.html", context=context)
+
+
+class GenreListView(generic.ListView):
+    model = Genre
+    template_name = "catalog/genre_list_view.html"
