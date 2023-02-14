@@ -48,4 +48,3 @@ class MusicianListView(generic.ListView):
 
 class BandListView(generic.ListView):
     model = Band
-    template_name = "catalog/band_list_view.html"
