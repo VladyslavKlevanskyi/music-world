@@ -32,7 +32,6 @@ def index(request):
 
 class GenreListView(generic.ListView):
     model = Genre
-    template_name = "catalog/genre_list_view.html"
 
 
 class CountryListView(generic.ListView):
