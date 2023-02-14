@@ -48,3 +48,8 @@ class InstrumentListView(generic.ListView):
 class MusicianListView(generic.ListView):
     model = Musician
     template_name = "catalog/musician_list_view.html"
+
+
+class BandListView(generic.ListView):
+    model = Band
+    template_name = "catalog/band_list_view.html"

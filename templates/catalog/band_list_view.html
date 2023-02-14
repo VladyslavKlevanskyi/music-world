@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>Band List</h1>
+
+	{% if band_list %}
+		<ul>
+			{% for band in  band_list %}
+				<li>{{ band }}</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>There are no bands in library!</p>
+	{% endif %}
+{% endblock %}
