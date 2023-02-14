@@ -1,7 +1,13 @@
 from django.shortcuts import render
 from django.views import generic
 
-from catalog.models import Band, Musician, Genre, Instrument
+from catalog.models import (
+    Band,
+    Musician,
+    Genre,
+    Instrument,
+    Country
+)
 
 
 def index(request):
@@ -27,3 +33,8 @@ def index(request):
 class GenreListView(generic.ListView):
     model = Genre
     template_name = "catalog/genre_list_view.html"
+
+
+class CountryListView(generic.ListView):
+    model = Country
+    template_name = "catalog/country_list_view.html"
