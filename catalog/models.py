@@ -49,7 +49,10 @@ class Band(models.Model):
     description = models.TextField()
     country = models.ForeignKey(Country, on_delete=models.DO_NOTHING)
     genres = models.ManyToManyField(Genre, related_name="bands")
-    members = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="bands")
+    members = models.ManyToManyField(
+        settings.AUTH_USER_MODEL,
+        related_name="bands"
+    )
 
     class Meta:
         ordering = ["name"]
