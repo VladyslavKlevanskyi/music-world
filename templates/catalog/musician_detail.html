@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h1>{{ musician.first_name }} {{ musician.last_name }}</h1>
+	<p>Username: <strong>{{ musician.username }}</strong></p>
+	<p>Instrument: <strong>{{ musician.instrument }}</strong></p>
+
+	<h2>Bands:</h2>
+	  <hr>
+		  <ul>
+		    {% for band in musician.bands.all %}
+		      <li><strong>{{ band.name }}</strong> from {{ band.country }}</li>
+		    {% empty %}
+			    <p>No bands!</p>
+			  {% endfor %}
+		  </ul>
+
+
+{% endblock %}

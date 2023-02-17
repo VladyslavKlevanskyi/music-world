@@ -7,7 +7,16 @@
 		<ul>
 			{% for musician in  musician_list %}
 				<li>
-					<a href="#">{{ musician }}</a>
+					<a href="{% url 'catalog:musician-detail-view' pk=musician.id %}">{{ musician }}</a>
+					<p>
+						Instrument:	{{ musician.instrument }}
+					</p>
+					<p>
+						Bands:
+						{% for band in musician.bands.all %}
+							{{ band.name }}
+						{% endfor %}
+					</p>
 				</li>
 			{% endfor %}
 		</ul>

@@ -5,6 +5,7 @@ from catalog.views import (
     CountryListView,
     InstrumentListView,
     MusicianListView,
+    MusicianDetailView,
     BandListView
 )
 
@@ -33,6 +34,11 @@ urlpatterns = [
         "musicians/",
         MusicianListView.as_view(),
         name="musician-list-view"
+    ),
+    path(
+        "musicians/<int:pk>/",
+        MusicianDetailView.as_view(),
+        name="musician-detail-view"
     ),
 
     path(

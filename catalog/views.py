@@ -44,8 +44,27 @@ class InstrumentListView(generic.ListView):
 
 class MusicianListView(generic.ListView):
     model = Musician
-    queryset = Musician.objects.all().select_related("instrument")
+    queryset = Musician.objects.all().select_related(
+        "instrument"
+    ).prefetch_related(
+        "bands"
+    )
+
+
+class MusicianDetailView(generic.DetailView):
+    model = Musician
+    queryset = Musician.objects.all().select_related(
+        "instrument"
+    ).prefetch_related(
+        "bands"
+    )
 
 
 class BandListView(generic.ListView):
     model = Band
+    queryset = Band.objects.all().select_related(
+        "country"
+    ).prefetch_related(
+        "genres"
+    )
+
