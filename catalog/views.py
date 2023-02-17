@@ -68,3 +68,11 @@ class BandListView(generic.ListView):
         "genres"
     )
 
+
+class BandDetailView(generic.DetailView):
+    model = Band
+    queryset = Band.objects.all().select_related(
+        "country"
+    ).prefetch_related(
+        "genres"
+    )

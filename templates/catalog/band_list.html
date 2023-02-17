@@ -6,7 +6,14 @@
 	{% if band_list %}
 		<ul>
 			{% for band in  band_list %}
-				<li>{{ band }}</li>
+				<li>
+					<a href="{% url 'catalog:band-detail-view' pk=band.id %}">{{ band.name }}</a>
+					from {{ band.country }}
+					( Genres:
+						{% for genre in band.genres.all %}
+							{{ genre.name }}
+						{% endfor %} )
+				</li>
 			{% endfor %}
 		</ul>
 	{% else %}
