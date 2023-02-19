@@ -9,7 +9,13 @@
 	  <hr>
 		  <ul>
 		    {% for band in musician.bands.all %}
-		      <li><strong>{{ band.name }}</strong> from {{ band.country }}</li>
+		      <li>
+			      <strong>
+				      <a href="{% url 'catalog:band-detail-view' pk=band.id %}">
+					      {{ band.name }}
+					    </a>
+			      </strong>
+			      from {{ band.country }}</li>
 		    {% empty %}
 			    <p>No bands!</p>
 			  {% endfor %}
