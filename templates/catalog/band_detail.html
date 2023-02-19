@@ -18,7 +18,9 @@
 		    {% for musician in band.members.all %}
 		      <li>
 			      <strong>
-				      {{ musician.first_name }} {{ musician.last_name }}
+				      <a href="{% url 'catalog:musician-detail-view' pk=musician.id %}">
+					      {{ musician.first_name }} {{ musician.last_name }}
+				      </a>
 		        </strong>
 			        ( {{ musician.instrument }} )
 		      </li>
