@@ -11,4 +11,9 @@
 				<li><strong>Music genres:</strong> {{ num_genres }}</li>
 				<li><strong>Musical instruments:</strong> {{ num_instruments }}</li>
 			</ul>
+
+			<p>You have visited this page
+      	{{ num_visits }} time{{ num_visits|pluralize }}.
+    	</p>
+
 {% endblock %}
