@@ -32,14 +32,17 @@ def index(request):
 
 class GenreListView(generic.ListView):
     model = Genre
+    paginate_by = 20
 
 
 class CountryListView(generic.ListView):
     model = Country
+    paginate_by = 20
 
 
 class InstrumentListView(generic.ListView):
     model = Instrument
+    paginate_by = 20
 
 
 class MusicianListView(generic.ListView):
@@ -49,6 +52,7 @@ class MusicianListView(generic.ListView):
     ).prefetch_related(
         "bands"
     )
+    paginate_by = 8
 
 
 class MusicianDetailView(generic.DetailView):
@@ -67,6 +71,7 @@ class BandListView(generic.ListView):
     ).prefetch_related(
         "genres"
     )
+    paginate_by = 10
 
 
 class BandDetailView(generic.DetailView):
