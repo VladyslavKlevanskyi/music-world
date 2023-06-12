@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.views import generic
 
@@ -10,6 +12,7 @@ from catalog.models import (
 )
 
 
+@login_required
 def index(request):
     num_bands = Band.objects.count()
     num_musicians = Musician.objects.count()
@@ -30,22 +33,22 @@ def index(request):
     return render(request, "catalog/index.html", context=context)
 
 
-class GenreListView(generic.ListView):
+class GenreListView(LoginRequiredMixin, generic.ListView):
     model = Genre
     paginate_by = 20
 
 
-class CountryListView(generic.ListView):
+class CountryListView(LoginRequiredMixin, generic.ListView):
     model = Country
     paginate_by = 20
 
 
-class InstrumentListView(generic.ListView):
+class InstrumentListView(LoginRequiredMixin, generic.ListView):
     model = Instrument
     paginate_by = 20
 
 
-class MusicianListView(generic.ListView):
+class MusicianListView(LoginRequiredMixin, generic.ListView):
     model = Musician
     queryset = Musician.objects.all().select_related(
         "instrument"
@@ -55,7 +58,7 @@ class MusicianListView(generic.ListView):
     paginate_by = 8
 
 
-class MusicianDetailView(generic.DetailView):
+class MusicianDetailView(LoginRequiredMixin, generic.DetailView):
     model = Musician
     queryset = Musician.objects.all().select_related(
         "instrument"
@@ -64,7 +67,7 @@ class MusicianDetailView(generic.DetailView):
     )
 
 
-class BandListView(generic.ListView):
+class BandListView(LoginRequiredMixin, generic.ListView):
     model = Band
     queryset = Band.objects.all().select_related(
         "country"
@@ -74,7 +77,7 @@ class BandListView(generic.ListView):
     paginate_by = 10
 
 
-class BandDetailView(generic.DetailView):
+class BandDetailView(LoginRequiredMixin, generic.DetailView):
     model = Band
     queryset = Band.objects.all().select_related(
         "country"
