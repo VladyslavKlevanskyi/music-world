@@ -2,6 +2,7 @@ from django.urls import path
 from catalog.views import (
     index,
     GenreListView,
+    GenreCreateView,
     CountryListView,
     InstrumentListView,
     MusicianListView,
@@ -17,6 +18,11 @@ urlpatterns = [
         "genres/",
         GenreListView.as_view(),
         name="genre-list-view"
+    ),
+    path(
+        "genres/create/",
+        GenreCreateView.as_view(),
+        name="genre-create"
     ),
 
     path(

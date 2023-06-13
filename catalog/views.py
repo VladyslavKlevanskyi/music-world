@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views import generic
 
 from catalog.models import (
@@ -36,6 +37,12 @@ def index(request):
 class GenreListView(LoginRequiredMixin, generic.ListView):
     model = Genre
     paginate_by = 20
+
+
+class GenreCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Genre
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:genre-list-view")
 
 
 class CountryListView(LoginRequiredMixin, generic.ListView):

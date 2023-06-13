@@ -3,6 +3,10 @@
 {% block content %}
 	<h1>Genre List</h1>
 
+	<a href="{% url 'catalog:genre-create' %}" class="btn btn-primary link-to-page">
+		Add new genre
+	</a>
+
 	{% if genre_list %}
 		<ul>
 			{% for genre in  genre_list %}
