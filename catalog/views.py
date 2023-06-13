@@ -83,6 +83,23 @@ class InstrumentListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 20
 
 
+class InstrumentCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Instrument
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:instrument-list-view")
+
+
+class InstrumentUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Instrument
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:instrument-list-view")
+
+
+class InstrumentDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Instrument
+    success_url = reverse_lazy("catalog:instrument-list-view")
+
+
 class MusicianListView(LoginRequiredMixin, generic.ListView):
     model = Musician
     queryset = Musician.objects.all().select_related(

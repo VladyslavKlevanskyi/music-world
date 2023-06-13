@@ -3,10 +3,23 @@
 {% block content %}
 	<h1>Instrument List</h1>
 
+	<a href="{% url 'catalog:instrument-create' %}" class="btn btn-primary link-to-page">
+		Add new instrument
+	</a>
+
 	{% if instrument_list %}
 		<ul>
 			{% for instrument in  instrument_list %}
-				<li>{{ instrument }}</li>
+				<li>
+					{{ instrument }}
+					<a href="{% url 'catalog:instrument-update' pk=instrument.id %}">
+          	Update
+          </a>
+					 /
+					<a style="color: red" href="{% url 'catalog:instrument-delete' pk=instrument.id %}">
+          	Delete
+					</a>
+				</li>
 			{% endfor %}
 		</ul>
 	{% else %}
