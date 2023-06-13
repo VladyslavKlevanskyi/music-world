@@ -3,6 +3,7 @@ from catalog.views import (
     index,
     GenreListView,
     GenreCreateView,
+    GenreUpdateView,
     CountryListView,
     InstrumentListView,
     MusicianListView,
@@ -23,6 +24,11 @@ urlpatterns = [
         "genres/create/",
         GenreCreateView.as_view(),
         name="genre-create"
+    ),
+    path(
+        "genres/<int:pk>/update/",
+        GenreUpdateView.as_view(),
+        name="genre-update"
     ),
 
     path(

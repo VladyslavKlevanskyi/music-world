@@ -45,6 +45,12 @@ class GenreCreateView(LoginRequiredMixin, generic.CreateView):
     success_url = reverse_lazy("catalog:genre-list-view")
 
 
+class GenreUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Genre
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:genre-list-view")
+
+
 class CountryListView(LoginRequiredMixin, generic.ListView):
     model = Country
     paginate_by = 20
