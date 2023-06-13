@@ -4,6 +4,7 @@ from catalog.views import (
     GenreListView,
     GenreCreateView,
     GenreUpdateView,
+    GenreDeleteView,
     CountryListView,
     InstrumentListView,
     MusicianListView,
@@ -29,6 +30,11 @@ urlpatterns = [
         "genres/<int:pk>/update/",
         GenreUpdateView.as_view(),
         name="genre-update"
+    ),
+    path(
+        "genres/<int:pk>/delete/",
+        GenreDeleteView.as_view(),
+        name="genre-delete"
     ),
 
     path(

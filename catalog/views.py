@@ -51,6 +51,11 @@ class GenreUpdateView(LoginRequiredMixin, generic.UpdateView):
     success_url = reverse_lazy("catalog:genre-list-view")
 
 
+class GenreDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Genre
+    success_url = reverse_lazy("catalog:genre-list-view")
+
+
 class CountryListView(LoginRequiredMixin, generic.ListView):
     model = Country
     paginate_by = 20

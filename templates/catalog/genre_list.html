@@ -15,6 +15,10 @@
 					<a href="{% url 'catalog:genre-update' pk=genre.id %}">
           	Update
           </a>
+					 /
+					<a style="color: red" href="{% url 'catalog:genre-delete' pk=genre.id %}">
+          	Delete
+					</a>
 				</li>
 			{% endfor %}
 		</ul>
