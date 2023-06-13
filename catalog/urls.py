@@ -6,6 +6,9 @@ from catalog.views import (
     GenreUpdateView,
     GenreDeleteView,
     CountryListView,
+    CountryCreateView,
+    CountryUpdateView,
+    CountryDeleteView,
     InstrumentListView,
     MusicianListView,
     MusicianDetailView,
@@ -41,6 +44,21 @@ urlpatterns = [
         "countries/",
         CountryListView.as_view(),
         name="country-list-view"
+    ),
+    path(
+        "countries/create/",
+        CountryCreateView.as_view(),
+        name="country-create"
+    ),
+    path(
+        "countries/<int:pk>/update/",
+        CountryUpdateView.as_view(),
+        name="country-update"
+    ),
+    path(
+        "countries/<int:pk>/delete/",
+        CountryDeleteView.as_view(),
+        name="country-delete"
     ),
 
     path(

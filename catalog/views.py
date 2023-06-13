@@ -61,6 +61,23 @@ class CountryListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 20
 
 
+class CountryCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Country
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:country-list-view")
+
+
+class CountryUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Country
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:country-list-view")
+
+
+class CountryDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Country
+    success_url = reverse_lazy("catalog:country-list-view")
+
+
 class InstrumentListView(LoginRequiredMixin, generic.ListView):
     model = Instrument
     paginate_by = 20

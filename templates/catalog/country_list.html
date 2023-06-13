@@ -3,10 +3,24 @@
 {% block content %}
 	<h1>Country List</h1>
 
+	<a href="{% url 'catalog:country-create' %}" class="btn btn-primary link-to-page">
+		Add new country
+	</a>
+
 	{% if country_list %}
 		<ul>
 			{% for country in  country_list %}
-				<li>{{ country }}</li>
+				<li>
+					{{ country }}
+					<a href="{% url 'catalog:country-update' pk=country.id %}">
+          	Update
+          </a>
+					 /
+					<a style="color: red" href="{% url 'catalog:country-delete' pk=country.id %}">
+          	Delete
+					</a>
+
+				</li>
 			{% endfor %}
 		</ul>
 	{% else %}
