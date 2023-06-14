@@ -19,7 +19,10 @@ from catalog.views import (
     MusicianUpdateView,
     MusicianDeleteView,
     BandListView,
-    BandDetailView
+    BandDetailView,
+    BandCreateView,
+    BandUpdateView,
+    BandDeleteView
 )
 
 urlpatterns = [
@@ -124,7 +127,21 @@ urlpatterns = [
         BandDetailView.as_view(),
         name="band-detail-view"
     ),
-
+    path(
+        "bands/create/",
+        BandCreateView.as_view(),
+        name="band-create"
+    ),
+    path(
+        "bands/<int:pk>/update/",
+        BandUpdateView.as_view(),
+        name="band-update"
+    ),
+    path(
+        "bands/<int:pk>/delete/",
+        BandDeleteView.as_view(),
+        name="band-delete"
+    ),
 ]
 
 app_name = "catalog"

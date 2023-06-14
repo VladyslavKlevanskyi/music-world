@@ -3,6 +3,10 @@
 {% block content %}
 	<h1>Band List</h1>
 
+	<a href="{% url 'catalog:band-create' %}" class="btn btn-primary link-to-page">
+		Add new band
+	</a>
+
 	{% if band_list %}
 		<ul>
 			{% for band in  band_list %}
@@ -13,6 +17,15 @@
 						{% for genre in band.genres.all %}
 							{{ genre.name }}
 						{% endfor %} )
+
+					<a href="{% url 'catalog:band-update' pk=band.id %}">
+          	Edit
+          </a>
+					 /
+					<a style="color: red" href="{% url 'catalog:band-delete' pk=band.id %}">
+          	Delete
+					</a>
+
 				</li>
 			{% endfor %}
 		</ul>

@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from catalog.forms import MusicianCreationForm
+from catalog.forms import MusicianCreationForm, BandForm
 from catalog.models import (
     Band,
     Musician,
@@ -154,3 +154,20 @@ class BandDetailView(LoginRequiredMixin, generic.DetailView):
     ).prefetch_related(
         "genres"
     )
+
+
+class BandCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Band
+    form_class = BandForm
+    success_url = reverse_lazy("catalog:band-list-view")
+
+
+class BandUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Band
+    form_class = BandForm
+    success_url = reverse_lazy("catalog:band-list-view")
+
+
+class BandDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Band
+    success_url = reverse_lazy("catalog:band-list-view")
