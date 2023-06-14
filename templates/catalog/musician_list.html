@@ -12,6 +12,13 @@
 			{% for musician in  musician_list %}
 				<li>
 					<a href="{% url 'catalog:musician-detail-view' pk=musician.id %}">{{ musician }}</a>
+					<a style="color: green" href="{% url 'catalog:musician-update' pk=musician.id %}">
+          	Edit
+          </a>
+					 /
+					<a style="color: red" href="{% url 'catalog:musician-delete' pk=musician.id %}">
+          	Delete
+					</a>
 					<p>
 						Instrument:	{{ musician.instrument }}
 					</p>

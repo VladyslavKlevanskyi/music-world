@@ -16,6 +16,8 @@ from catalog.views import (
     MusicianListView,
     MusicianDetailView,
     MusicianCreateView,
+    MusicianUpdateView,
+    MusicianDeleteView,
     BandListView,
     BandDetailView
 )
@@ -100,6 +102,16 @@ urlpatterns = [
         "musicians/create/",
         MusicianCreateView.as_view(),
         name="musician-create"
+    ),
+    path(
+        "musicians/<int:pk>/update/",
+        MusicianUpdateView.as_view(),
+        name="musician-update"
+    ),
+    path(
+        "musicians/<int:pk>/delete/",
+        MusicianDeleteView.as_view(),
+        name="musician-delete"
     ),
 
     path(

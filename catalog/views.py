@@ -126,6 +126,17 @@ class MusicianCreateView(LoginRequiredMixin, generic.CreateView):
     success_url = reverse_lazy("catalog:musician-list-view")
 
 
+class MusicianUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Musician
+    form_class = MusicianCreationForm
+    success_url = reverse_lazy("catalog:musician-list-view")
+
+
+class MusicianDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Musician
+    success_url = reverse_lazy("catalog:musician-list-view")
+
+
 class BandListView(LoginRequiredMixin, generic.ListView):
     model = Band
     queryset = Band.objects.all().select_related(
