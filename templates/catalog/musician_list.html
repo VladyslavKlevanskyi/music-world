@@ -3,6 +3,10 @@
 {% block content %}
 	<h1>Musician List</h1>
 
+	<a href="{% url 'catalog:musician-create' %}" class="btn btn-primary link-to-page">
+		Add new musician
+	</a>
+
 	{% if musician_list %}
 		<ul>
 			{% for musician in  musician_list %}
