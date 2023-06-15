@@ -4,7 +4,11 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from catalog.forms import MusicianCreationForm, BandForm, BandSearchForm
+from catalog.forms import (
+    MusicianCreationForm,
+    BandForm, BandSearchForm,
+    GenreSearchForm,
+)
 from catalog.models import (
     Band,
     Musician,
@@ -38,6 +42,27 @@ def index(request):
 class GenreListView(LoginRequiredMixin, generic.ListView):
     model = Genre
     paginate_by = 20
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(GenreListView, self).get_context_data(**kwargs)
+
+        name = self.request.GET.get("name", "")
+
+        context["search_form"] = GenreSearchForm(initial={
+            "name": name
+        })
+
+        return context
+
+    def get_queryset(self):
+        queryset = Genre.objects.all()
+
+        name = self.request.GET.get("name")
+
+        if name:
+            return queryset.filter(name__icontains=name)
+
+        return queryset
 
 
 class GenreCreateView(LoginRequiredMixin, generic.CreateView):

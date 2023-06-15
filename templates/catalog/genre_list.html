@@ -7,6 +7,10 @@
 		Add new genre
 	</a>
 
+	{% block searching %}
+  	{% include "includes/searching.html" %}
+  {% endblock %}
+
 	{% if genre_list %}
 		<ul>
 			{% for genre in  genre_list %}

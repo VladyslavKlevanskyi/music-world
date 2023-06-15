@@ -36,3 +36,12 @@ class BandSearchForm(forms.Form):
         label="",
         widget=forms.TextInput(attrs={"placeholder": "Find band..."})
     )
+
+
+class GenreSearchForm(forms.Form):
+    name = forms.CharField(
+        max_length=63,
+        required=False,
+        label="",
+        widget=forms.TextInput(attrs={"placeholder": "Find genre..."})
+    )
