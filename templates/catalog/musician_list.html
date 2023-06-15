@@ -7,6 +7,10 @@
 		Add new musician
 	</a>
 
+	{% block searching %}
+  	{% include "includes/searching.html" %}
+  {% endblock %}
+
 	{% if musician_list %}
 		<ul>
 			{% for musician in  musician_list %}

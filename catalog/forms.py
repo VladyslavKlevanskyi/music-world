@@ -14,6 +14,15 @@ class MusicianCreationForm(UserCreationForm):
         )
 
 
+class MusicianSearchForm(forms.Form):
+    musician = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(attrs={"placeholder": "Find musician..."})
+    )
+
+
 class BandForm(forms.ModelForm):
     genres = forms.ModelMultipleChoiceField(
         queryset=Genre.objects.all(),
@@ -49,8 +58,17 @@ class GenreSearchForm(forms.Form):
 
 class CountrySearchForm(forms.Form):
     name = forms.CharField(
-        max_length=63,
+        max_length=255,
         required=False,
         label="",
         widget=forms.TextInput(attrs={"placeholder": "Find country..."})
+    )
+
+
+class InstrumentSearchForm(forms.Form):
+    name = forms.CharField(
+        max_length=63,
+        required=False,
+        label="",
+        widget=forms.TextInput(attrs={"placeholder": "Find instrument..."})
     )

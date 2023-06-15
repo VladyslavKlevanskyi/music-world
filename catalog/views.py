@@ -6,9 +6,12 @@ from django.views import generic
 
 from catalog.forms import (
     MusicianCreationForm,
-    BandForm, BandSearchForm,
+    MusicianSearchForm,
+    BandForm,
+    BandSearchForm,
     GenreSearchForm,
     CountrySearchForm,
+    InstrumentSearchForm,
 )
 from catalog.models import (
     Band,
@@ -130,6 +133,27 @@ class InstrumentListView(LoginRequiredMixin, generic.ListView):
     model = Instrument
     paginate_by = 20
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(InstrumentListView, self).get_context_data(**kwargs)
+
+        name = self.request.GET.get("name", "")
+
+        context["search_form"] = InstrumentSearchForm(initial={
+            "name": name
+        })
+
+        return context
+
+    def get_queryset(self):
+        queryset = Instrument.objects.all()
+
+        name = self.request.GET.get("name")
+
+        if name:
+            return queryset.filter(name__icontains=name)
+
+        return queryset
+
 
 class InstrumentCreateView(LoginRequiredMixin, generic.CreateView):
     model = Instrument
@@ -150,12 +174,36 @@ class InstrumentDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 class MusicianListView(LoginRequiredMixin, generic.ListView):
     model = Musician
-    queryset = Musician.objects.all().select_related(
-        "instrument"
-    ).prefetch_related(
-        "bands"
-    )
     paginate_by = 8
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super(MusicianListView, self).get_context_data(**kwargs)
+
+        searching = self.request.GET.get("musician", "")
+
+        context["search_form"] = MusicianSearchForm(
+            initial={"musician": searching}
+        )
+
+        return context
+
+    def get_queryset(self):
+        queryset = Musician.objects.select_related(
+            "instrument"
+        ).prefetch_related(
+            "bands"
+        )
+
+        musician = self.request.GET.get("musician")
+
+        if musician:
+            first_name = queryset.filter(first_name__icontains=musician)
+            if first_name:
+                return first_name
+
+            return queryset.filter(last_name__icontains=musician)
+
+        return queryset
 
 
 class MusicianDetailView(LoginRequiredMixin, generic.DetailView):

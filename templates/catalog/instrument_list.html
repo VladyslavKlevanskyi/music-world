@@ -7,6 +7,10 @@
 		Add new instrument
 	</a>
 
+	{% block searching %}
+  	{% include "includes/searching.html" %}
+  {% endblock %}
+
 	{% if instrument_list %}
 		<ul>
 			{% for instrument in  instrument_list %}
