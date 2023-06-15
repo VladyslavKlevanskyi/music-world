@@ -7,6 +7,10 @@
 		Add new band
 	</a>
 
+	{% block searching %}
+  	{% include "includes/searching.html" %}
+  {% endblock %}
+
 	{% if band_list %}
 		<ul>
 			{% for band in  band_list %}
