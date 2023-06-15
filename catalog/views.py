@@ -139,11 +139,6 @@ class MusicianDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 class BandListView(LoginRequiredMixin, generic.ListView):
     model = Band
-    queryset = Band.objects.all().select_related(
-        "country"
-    ).prefetch_related(
-        "genres"
-    )
     paginate_by = 10
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -158,12 +153,18 @@ class BandListView(LoginRequiredMixin, generic.ListView):
         return context
 
     def get_queryset(self):
+        queryset = Band.objects.select_related(
+            "country"
+        ).prefetch_related(
+            "genres"
+        )
+
         name = self.request.GET.get("name")
 
         if name:
-            return self.queryset.filter(name__icontains=name)
+            return queryset.filter(name__icontains=name)
 
-        return self.queryset
+        return queryset
 
 
 class BandDetailView(LoginRequiredMixin, generic.DetailView):
