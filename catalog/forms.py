@@ -45,3 +45,12 @@ class GenreSearchForm(forms.Form):
         label="",
         widget=forms.TextInput(attrs={"placeholder": "Find genre..."})
     )
+
+
+class CountrySearchForm(forms.Form):
+    name = forms.CharField(
+        max_length=63,
+        required=False,
+        label="",
+        widget=forms.TextInput(attrs={"placeholder": "Find country..."})
+    )
