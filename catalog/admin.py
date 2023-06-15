@@ -38,4 +38,3 @@ admin.site.register(Genre)
 admin.site.register(Country)
 admin.site.register(Instrument)
 admin.site.register(Band)
-
