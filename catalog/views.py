@@ -88,7 +88,7 @@ class GenreDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 class CountryListView(LoginRequiredMixin, generic.ListView):
     model = Country
-    paginate_by = 20
+    paginate_by = 8
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(CountryListView, self).get_context_data(**kwargs)

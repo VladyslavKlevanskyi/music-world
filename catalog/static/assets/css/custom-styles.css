@@ -1,0 +1,21 @@
+.country-list {
+    list-style-type: none;
+}
+
+.update-delete {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.update {
+    color: blue;
+}
+
+.delete {
+    color: red;
+}
+
+.slash {
+    font-weight: normal;
+    color: gray
+}
