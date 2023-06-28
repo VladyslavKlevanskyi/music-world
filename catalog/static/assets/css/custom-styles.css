@@ -4,11 +4,11 @@
 
 .update-delete {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
 .update {
-    color: blue;
+    color: #b2b2b2;
 }
 
 .delete {
