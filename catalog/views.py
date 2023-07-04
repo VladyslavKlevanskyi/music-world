@@ -131,7 +131,7 @@ class CountryDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 class InstrumentListView(LoginRequiredMixin, generic.ListView):
     model = Instrument
-    paginate_by = 20
+    paginate_by = 8
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(InstrumentListView, self).get_context_data(**kwargs)
