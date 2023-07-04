@@ -45,7 +45,7 @@ def index(request):
 
 class GenreListView(LoginRequiredMixin, generic.ListView):
     model = Genre
-    paginate_by = 20
+    paginate_by = 8
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(GenreListView, self).get_context_data(**kwargs)

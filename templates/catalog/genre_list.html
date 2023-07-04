@@ -1,32 +1,98 @@
 {% extends "base.html" %}
 
+{% block title %} Genre List {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+  <link href="{{ ASSETS_ROOT }}/css/custom-styles.css" rel="stylesheet" />
+{% endblock stylesheets %}
+
 {% block content %}
-	<h1>Genre List</h1>
 
-	<a href="{% url 'catalog:genre-create' %}" class="btn btn-primary link-to-page">
-		Add new genre
-	</a>
+	<section class="header-2">
+    <div class="page-header-lists section-height-75 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved.jpg')">
+      <div class="container">
 
-	{% block searching %}
-  	{% include "includes/searching.html" %}
-  {% endblock %}
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-7">
+            <h1 class="text-white pt-3 text-white">
+              Genre List
+            </h1>
+          </div>
+        </div>
 
-	{% if genre_list %}
-		<ul>
-			{% for genre in  genre_list %}
-				<li>
-					{{ genre }}
-					<a href="{% url 'catalog:genre-update' pk=genre.id %}">
-          	Update
-          </a>
-					 /
-					<a style="color: red" href="{% url 'catalog:genre-delete' pk=genre.id %}">
-          	Delete
-					</a>
-				</li>
-			{% endfor %}
-		</ul>
-	{% else %}
-		<p>There are no genres in library!</p>
-	{% endif %}
+        <div class="row">
+          <div class="col-lg-3 text-center mx-auto mt-2">
+            {% block searching %}
+              {% include "includes/searching.html" %}
+            {% endblock %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-2">
+            {% if genre_list %}
+              <ul class="lead text-white country-list">
+                {% for genre in  genre_list %}
+                  <li>
+                    {{ genre }}
+                    <span class="update-delete">
+                      <a class="update" href="{% url 'catalog:genre-update' pk=genre.id %}" title="Update">
+                        🖋
+                      </a>
+                      <span class="slash"> / </span>
+                      <a href="{% url 'catalog:genre-delete' pk=genre.id %}" title="Delete">
+                        ❌
+                      </a>
+                    </span>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p>There are no genres in library!</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto">
+ 					  <a href="{% url 'catalog:genre-create' %}" class="btn bg-gradient-secondary">
+					    Add a new genre
+					  </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="position-absolute w-100 z-index-1 bottom-0">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+	<section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mx-auto mt-n10">
+          {% block pagination %}
+            {% include "includes/pagination.html" %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </section>
+
 {% endblock %}
+
