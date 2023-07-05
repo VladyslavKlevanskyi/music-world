@@ -174,7 +174,7 @@ class InstrumentDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 class MusicianListView(LoginRequiredMixin, generic.ListView):
     model = Musician
-    paginate_by = 8
+    paginate_by = 4
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(MusicianListView, self).get_context_data(**kwargs)

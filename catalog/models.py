@@ -41,7 +41,7 @@ class Musician(AbstractUser):
         ordering = ["username"]
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} ({self.instrument.name})"
+        return f"{self.first_name} {self.last_name}"
 
 
 class Band(models.Model):
@@ -58,4 +58,4 @@ class Band(models.Model):
         ordering = ["name"]
 
     def __str__(self):
-        return f"{self.name} form {self.country}"
+        return f"{self.name}"
