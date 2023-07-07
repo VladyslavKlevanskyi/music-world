@@ -19,7 +19,12 @@ class MusicianSearchForm(forms.Form):
         max_length=255,
         required=False,
         label="",
-        widget=forms.TextInput(attrs={"placeholder": "Find musician..."})
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Find musician...",
+                "class": "form-control"
+            }
+        )
     )
 
 
@@ -43,7 +48,12 @@ class BandSearchForm(forms.Form):
         max_length=255,
         required=False,
         label="",
-        widget=forms.TextInput(attrs={"placeholder": "Find band..."})
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Find band...",
+                "class": "form-control"
+            }
+        )
     )
 
 
@@ -52,7 +62,12 @@ class GenreSearchForm(forms.Form):
         max_length=63,
         required=False,
         label="",
-        widget=forms.TextInput(attrs={"placeholder": "Find genre..."})
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Find genre...",
+                "class": "form-control"
+            }
+        )
     )
 
 
@@ -61,7 +76,12 @@ class CountrySearchForm(forms.Form):
         max_length=255,
         required=False,
         label="",
-        widget=forms.TextInput(attrs={"placeholder": "Find country..."})
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Find country...",
+                "class": "form-control"
+            }
+        )
     )
 
 
@@ -70,5 +90,10 @@ class InstrumentSearchForm(forms.Form):
         max_length=63,
         required=False,
         label="",
-        widget=forms.TextInput(attrs={"placeholder": "Find instrument..."})
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Find instrument...",
+                "class": "form-control"
+            }
+        )
     )

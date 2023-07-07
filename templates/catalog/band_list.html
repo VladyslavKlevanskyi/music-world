@@ -22,7 +22,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-3 text-center mx-auto mt-2">
+          <div class="col-lg-3 text-center mx-auto">
             {% block searching %}
               {% include "includes/searching.html" %}
             {% endblock %}
@@ -63,7 +63,7 @@
                 {% endfor %}
               </ul>
             {% else %}
-              <p>There are no bands in library!</p>
+              <p class="text-warning">There are no bands in library!</p>
             {% endif %}
           </div>
         </div>
