@@ -1,10 +1,62 @@
 {% extends "base.html" %}
 
-{% block content %}
-  <h1>Are you sure you want to delete the {{ genre.name }} genre??</h1>
-  <form action="" method="post">
-    {% csrf_token %}
+{% block title %} {{ musician }} {% endblock title %}
 
-    <input type="submit" value="Yes" class="btn btn-danger">
-  </form>
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+  <link href="{{ ASSETS_ROOT }}/css/custom-styles.css" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+
+	<section class="header-2">
+    <div class="page-header-lists section-height-75 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved.jpg')">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-7">
+            <h1 class="text-white pt-3">
+              {{ genre.name }}
+            </h1>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-9 text-center mx-auto">
+            <h3 class="text-danger">
+                Do you want to delete this genre?
+            </h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-9 text-center mx-auto">
+              <form action="" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Yes" class="btn btn-sm bg-gradient-danger">
+              </form>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="position-absolute w-100 z-index-1 bottom-0">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="moving-waves">
+            <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+            <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+            <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+            <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
 {% endblock %}
