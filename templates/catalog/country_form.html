@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load crispy_forms_filters %}
 
-{% block title %} Country {% endblock title %}
+{% block title %} {{ object|yesno:"Update,Create" }} country {% endblock title %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}

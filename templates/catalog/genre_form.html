@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load crispy_forms_filters %}
 
-{% block title %} Create genre {% endblock title %}
+{% block title %} {{ object|yesno:"Update,Create" }} genre {% endblock title %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}
