@@ -1,0 +1,15 @@
+{% load crispy_forms_filters %}
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 text-center mx-auto">
+        <form action="" method="post" novalidate>
+          {% csrf_token %}
+          {{ form|crispy }}
+          <input type="submit" value="Submit" class="btn btn-sm bg-gradient-primary">
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

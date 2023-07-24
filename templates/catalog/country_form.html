@@ -11,7 +11,7 @@
 {% block content %}
 
 	<section class="header-2">
-    <div class="page-header-lists section-height-75 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved.jpg')">
+    <div class="page-header-lists section-height-30 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved.jpg')">
       <div class="container">
 
         <div class="row">
@@ -19,16 +19,6 @@
             <h1 class="text-white pt-3">
               {{ object|yesno:"Update,Create" }} country
             </h1>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-3 text-center mx-auto">
-            <form action="" method="post" novalidate>
-              {% csrf_token %}
-              {{ form|crispy }}
-              <input type="submit" value="Submit" class="btn btn-sm bg-gradient-primary">
-            </form>
           </div>
         </div>
 
@@ -40,5 +30,9 @@
 
     </div>
   </section>
+
+  {% block simple_form %}
+    {% include "includes/simple_form.html" %}
+  {% endblock %}
 
 {% endblock %}
