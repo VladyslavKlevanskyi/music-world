@@ -29,3 +29,6 @@
   font-size: 1rem;
   padding: 0.5rem
 }
+
+.section-height-30 {
+  min-height: 30vh; }
