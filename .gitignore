@@ -1,3 +1,4 @@
+.env
 main.py
 init_django_orm.py
 
