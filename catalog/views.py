@@ -1,6 +1,4 @@
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
@@ -22,25 +20,24 @@ from catalog.models import (
 )
 
 
-@login_required
-def index(request):
-    num_bands = Band.objects.count()
-    num_musicians = Musician.objects.count()
-    num_genres = Genre.objects.count()
-    num_instruments = Instrument.objects.count()
+class Index(LoginRequiredMixin, generic.TemplateView):
+    template_name = "catalog/index.html"
 
-    num_visits = request.session.get("num_visits", 0)
-    request.session["num_visits"] = num_visits + 1
+    def get_context_data(self, *, object_list=None, **kwargs):
 
-    context = {
-        "num_bands": num_bands,
-        "num_musicians": num_musicians,
-        "num_genres": num_genres,
-        "num_instruments": num_instruments,
-        "num_visits": num_visits + 1,
-    }
+        num_bands = Band.objects.count()
+        num_musicians = Musician.objects.count()
+        num_genres = Genre.objects.count()
+        num_instruments = Instrument.objects.count()
 
-    return render(request, "catalog/index.html", context=context)
+        context = {
+            "num_bands": num_bands,
+            "num_musicians": num_musicians,
+            "num_genres": num_genres,
+            "num_instruments": num_instruments,
+        }
+
+        return context
 
 
 class GenreListView(LoginRequiredMixin, generic.ListView):

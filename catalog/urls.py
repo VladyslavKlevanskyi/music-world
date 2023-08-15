@@ -1,6 +1,6 @@
 from django.urls import path
 from catalog.views import (
-    index,
+    Index,
     GenreListView,
     GenreCreateView,
     GenreUpdateView,
@@ -26,7 +26,7 @@ from catalog.views import (
 )
 
 urlpatterns = [
-    path("", index, name="index"),
+    path("", Index.as_view(), name="index"),
 
     path(
         "genres/",
