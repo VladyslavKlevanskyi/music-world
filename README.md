@@ -72,13 +72,19 @@ Generate a new secret key:
 
 Rename `.env_sample` file to `.env`. Open it and replace `<your_secret_key>` with the key you generated before.
 
-### 6. Run the project
+### 7. Run tests
+
+In order to make sure that the project is working correctly, run the tests with the command:
+
+    $ python manage.py test 
+
+### 8. Run the project
 
 You can now run the development server:
 
     $ python manage.py runserver
 
-### 7. Entrance to the music library
+### 9. Entrance to the music library
 
 In the address bar of your browser, enter:
 
