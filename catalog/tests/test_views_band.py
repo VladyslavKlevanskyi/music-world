@@ -3,7 +3,6 @@ from django.test import TestCase
 from django.urls import reverse
 from catalog.models import (
     Instrument,
-    Musician,
     Band,
     Genre,
     Country
@@ -64,13 +63,6 @@ class BandViewTest(TestCase):
         number_of_bands = 7
 
         country = Country.objects.create(name="India")
-
-        # instrument = Instrument.objects.create(name="Guitar")
-        # musician = get_user_model().objects.create_user(
-        #     username="U_serName",
-        #     password="P_ass12345",
-        #     instrument=instrument
-        # )
 
         for band_id in range(number_of_bands):
             Band.objects.create(
