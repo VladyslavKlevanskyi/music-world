@@ -1,0 +1,66 @@
+{% extends "base-fullscreen.html" %}
+{% load crispy_forms_filters %}
+
+{% block title %} Sign IN {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <section>
+    <div class="page-header section-height-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
+            <div class="card card-plain">
+              <div class="card-header pb-0 text-left">
+                <h4 class="font-weight-bolder">
+                  Sign In
+                </h4>
+                <p class="mb-0">
+                  Add your credentials
+                </p>
+              </div>
+              <div class="card-body">
+
+                <form method="post" action="" role="form">
+
+                  {% csrf_token %}
+
+                  <div class="mb-3">
+                    {{ form|crispy }}
+                  </div>
+
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" name="login"
+                            class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Sign in</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
+            <div class="relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg justify-content-center page-header" style="background-image: url('{{ ASSETS_ROOT }}/img/illustrations/SJ.jpg')">
+              <h2 class="mt-5 text-white">
+                Music World Library
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE -->
+{% block javascripts %}
+
+  <script src="{{ ASSETS_ROOT }}/js/soft-design-system.min.js?v=1.0.1" type="text/javascript"></script>
+
+{% endblock javascripts %}

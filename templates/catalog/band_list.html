@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %} Band List {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+  <link href="{{ ASSETS_ROOT }}/css/custom-styles.css" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+
+	<section class="header-2">
+    <div class="page-header-lists section-height-75 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved.jpg')">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-7">
+            <h1 class="text-white pt-3 text-white">
+              Band List
+            </h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 text-center mx-auto">
+            {% block searching %}
+              {% include "includes/searching.html" %}
+            {% endblock %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-2">
+            {% if band_list %}
+              <ul class=" country-list">
+                {% for band in band_list %}
+                  <li>
+                    <a class="lead text-white" href="{% url 'catalog:band-detail-view' pk=band.id %}">
+                      {{ band }}
+                    </a>
+                    <span class="text-light-gray">
+                      [{{ band.country }}]
+                    </span>
+                    <span class="update-delete">
+                      <a class="update" href="{% url 'catalog:band-update' pk=band.id %}" title="Update">
+                        🖋
+                      </a>
+                      <span class="slash"> / </span>
+                      <a href="{% url 'catalog:band-delete' pk=band.id %}" title="Delete">
+                        ❌
+                      </a>
+                    </span>
+                    <div class="text-sm mb-2">
+                      <div>
+                        {% if band.genres.count > 0 %}
+                          <span class="text-secondary">Genre{{ band.genres.all|pluralize }}: </span>
+                          <span class="text-info">{{ band.genres.all|join:", " }}</span>
+                        {% endif %}
+                      </div>
+                    </div>
+
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p class="text-warning">There are no bands in library!</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto">
+ 					  <a href="{% url 'catalog:band-create' %}" class="btn bg-gradient-secondary">
+					    Add a new band
+					  </a>
+          </div>
+        </div>
+
+      </div>
+
+        {% block waves %}
+          {% include "includes/waves.html" %}
+        {% endblock %}
+
+    </div>
+  </section>
+
+	<section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mx-auto mt-n10">
+          {% block pagination %}
+            {% include "includes/pagination.html" %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

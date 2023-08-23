@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %} Musician List {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+  <link href="{{ ASSETS_ROOT }}/css/custom-styles.css" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+
+	<section class="header-2">
+    <div class="page-header-lists section-height-75 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved.jpg')">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-7">
+            <h1 class="text-white pt-3 text-white">
+              Musician List
+            </h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 text-center mx-auto mt-2">
+            {% block searching %}
+              {% include "includes/searching.html" %}
+            {% endblock %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-2">
+            {% if musician_list %}
+              <ul class=" country-list">
+                {% for musician in musician_list %}
+                  <li>
+                    <a class="lead text-white" href="{% url 'catalog:musician-detail-view' pk=musician.id %}">
+                      {{ musician }}
+                    </a>
+                    <span class="update-delete">
+                      <a class="update" href="{% url 'catalog:musician-update' pk=musician.id %}" title="Update">
+                        🖋
+                      </a>
+                      <span class="slash"> / </span>
+                      <a href="{% url 'catalog:musician-delete' pk=musician.id %}" title="Delete">
+                        ❌
+                      </a>
+                    </span>
+                    <div class="text-sm mb-2">
+                      <div>
+                        <span class="text-secondary"> Instrument: </span>
+                        <span class="text-info">{{ musician.instrument }}</span>
+                      </div>
+                      <div>
+                        {% if musician.bands.count > 0 %}
+                          <span class="text-secondary">Band{{ musician.bands.all|pluralize }}: </span>
+                          <span class="text-info">{{ musician.bands.all|join:", " }}</span>
+                        {% endif %}
+                      </div>
+                    </div>
+
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p class="text-warning">There are no musicians in library!</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto">
+ 					  <a href="{% url 'catalog:musician-create' %}" class="btn bg-gradient-secondary">
+					    Add a new musician
+					  </a>
+          </div>
+        </div>
+
+      </div>
+
+        {% block waves %}
+          {% include "includes/waves.html" %}
+        {% endblock %}
+
+    </div>
+  </section>
+
+	<section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mx-auto mt-n10">
+          {% block pagination %}
+            {% include "includes/pagination.html" %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

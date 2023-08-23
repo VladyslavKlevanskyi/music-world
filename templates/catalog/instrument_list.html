@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %} Instrument List {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+  <link href="{{ ASSETS_ROOT }}/css/custom-styles.css" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+
+	<section class="header-2">
+    <div class="page-header-lists section-height-75 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved.jpg')">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-7">
+            <h1 class="text-white pt-3 text-white">
+              Instrument List
+            </h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 text-center mx-auto mt-2">
+            {% block searching %}
+              {% include "includes/searching.html" %}
+            {% endblock %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-2">
+            {% if instrument_list %}
+              <ul class="lead text-white country-list">
+                {% for instrument in  instrument_list %}
+                  <li>
+                    {{ instrument }}
+                    <span class="update-delete">
+                      <a class="update" href="{% url 'catalog:instrument-update' pk=instrument.id %}" title="Update">
+                        🖋
+                      </a>
+                      <span class="slash"> / </span>
+                      <a href="{% url 'catalog:instrument-delete' pk=instrument.id %}" title="Delete">
+                        ❌
+                      </a>
+                    </span>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p class="text-warning">There are no instruments in library!</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto">
+ 					  <a href="{% url 'catalog:instrument-create' %}" class="btn bg-gradient-secondary">
+					    Add a new instrument
+					  </a>
+          </div>
+        </div>
+
+      </div>
+
+        {% block waves %}
+          {% include "includes/waves.html" %}
+        {% endblock %}
+
+    </div>
+  </section>
+
+	<section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mx-auto mt-n10">
+          {% block pagination %}
+            {% include "includes/pagination.html" %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+

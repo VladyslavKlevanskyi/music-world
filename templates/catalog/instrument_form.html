@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %} {{ object|yesno:"Update,Create" }} instrument {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+  <link href="{{ ASSETS_ROOT }}/css/custom-styles.css" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+
+	<section class="header-2">
+    <div class="page-header-lists section-height-30 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved.jpg')">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-7">
+            <h1 class="text-white pt-3">
+              {{ object|yesno:"Update,Create" }} instrument
+            </h1>
+          </div>
+        </div>
+
+      </div>
+
+        {% block waves %}
+          {% include "includes/waves.html" %}
+        {% endblock %}
+
+    </div>
+  </section>
+
+  {% block simple_form %}
+    {% include "includes/simple_form.html" %}
+  {% endblock %}
+
+{% endblock %}

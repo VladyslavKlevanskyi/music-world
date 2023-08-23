@@ -1,0 +1,1353 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add musician",
+    "content_type": 6,
+    "codename": "add_musician"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change musician",
+    "content_type": 6,
+    "codename": "change_musician"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete musician",
+    "content_type": 6,
+    "codename": "delete_musician"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view musician",
+    "content_type": 6,
+    "codename": "view_musician"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add country",
+    "content_type": 7,
+    "codename": "add_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change country",
+    "content_type": 7,
+    "codename": "change_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete country",
+    "content_type": 7,
+    "codename": "delete_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view country",
+    "content_type": 7,
+    "codename": "view_country"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add genre",
+    "content_type": 8,
+    "codename": "add_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change genre",
+    "content_type": 8,
+    "codename": "change_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete genre",
+    "content_type": 8,
+    "codename": "delete_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view genre",
+    "content_type": 8,
+    "codename": "view_genre"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add instrument",
+    "content_type": 9,
+    "codename": "add_instrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change instrument",
+    "content_type": 9,
+    "codename": "change_instrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete instrument",
+    "content_type": 9,
+    "codename": "delete_instrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view instrument",
+    "content_type": 9,
+    "codename": "view_instrument"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add band",
+    "content_type": 10,
+    "codename": "add_band"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change band",
+    "content_type": 10,
+    "codename": "change_band"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete band",
+    "content_type": 10,
+    "codename": "delete_band"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view band",
+    "content_type": 10,
+    "codename": "view_band"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "catalog",
+    "model": "musician"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "catalog",
+    "model": "country"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "catalog",
+    "model": "genre"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "catalog",
+    "model": "instrument"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "catalog",
+    "model": "band"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 1,
+  "fields": {
+    "name": "Progressive metal"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 2,
+  "fields": {
+    "name": "Progressive rock"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 3,
+  "fields": {
+    "name": "Instrumental rock"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 4,
+  "fields": {
+    "name": "Art rock"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 5,
+  "fields": {
+    "name": "Post-progressive"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 6,
+  "fields": {
+    "name": "Death metal"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 7,
+  "fields": {
+    "name": "Heavy metal"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 8,
+  "fields": {
+    "name": "Thrash metal"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 9,
+  "fields": {
+    "name": "Speed metal"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 10,
+  "fields": {
+    "name": "Hard rock"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 11,
+  "fields": {
+    "name": "Alternative rock"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 12,
+  "fields": {
+    "name": "Punk rock"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 13,
+  "fields": {
+    "name": "Garage rock"
+  }
+},
+{
+  "model": "catalog.genre",
+  "pk": 14,
+  "fields": {
+    "name": "Glam metal"
+  }
+},
+{
+  "model": "catalog.country",
+  "pk": 1,
+  "fields": {
+    "name": "USA"
+  }
+},
+{
+  "model": "catalog.country",
+  "pk": 2,
+  "fields": {
+    "name": "Sweden"
+  }
+},
+{
+  "model": "catalog.country",
+  "pk": 3,
+  "fields": {
+    "name": "England"
+  }
+},
+{
+  "model": "catalog.country",
+  "pk": 4,
+  "fields": {
+    "name": "Germany"
+  }
+},
+{
+  "model": "catalog.instrument",
+  "pk": 1,
+  "fields": {
+    "name": "Guitar"
+  }
+},
+{
+  "model": "catalog.instrument",
+  "pk": 2,
+  "fields": {
+    "name": "Bass"
+  }
+},
+{
+  "model": "catalog.instrument",
+  "pk": 3,
+  "fields": {
+    "name": "Voice"
+  }
+},
+{
+  "model": "catalog.instrument",
+  "pk": 4,
+  "fields": {
+    "name": "Drums"
+  }
+},
+{
+  "model": "catalog.instrument",
+  "pk": 5,
+  "fields": {
+    "name": "Keyboards"
+  }
+},
+{
+  "model": "catalog.instrument",
+  "pk": 6,
+  "fields": {
+    "name": "Voice/Guitar"
+  }
+},
+{
+  "model": "catalog.instrument",
+  "pk": 7,
+  "fields": {
+    "name": "Saxophone"
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$dty9NAyqbGTr5TQeEzeezk$oPu5UOHjUROOV2mvaEhM1C0qdaDjUoz02AlwV+Fjo6Q=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "John",
+    "last_name": "Petrucci",
+    "email": "John.Petrucci@music.world",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:42.884Z",
+    "instrument": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$6Qkl8DlWTG9qVwc8bBFPJL$nXTWU8/FWA2fbreqVFNv/Lv9ljzfzsWF3uQasuTIz8g=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jonh_M",
+    "first_name": "John",
+    "last_name": "Myung",
+    "email": "John.Myung@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:43.001Z",
+    "instrument": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$Vj7hKnf4flR28QWgKq87oN$P37bKrHPKDw5O6tgmltCmnLsqxZ/sq7JpFSpqrp8UlI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "James_B",
+    "first_name": "James",
+    "last_name": "LaBrie",
+    "email": "James.LaBrie@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:43.116Z",
+    "instrument": 3,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$G9MFZX1UWup2lkJpV5BMvj$bi6jZWAxPBEKjmaUE75vrnwnaUywSpVq3jpyouJJwPc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jordan_R",
+    "first_name": "Jordan",
+    "last_name": "Rudess",
+    "email": "Jordan.Rudess@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:43.233Z",
+    "instrument": 5,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$JSb9UeFzaEgqpqBl3jHdv2$tlp9t9ZV0X2zN0Vg9QJUzmSMWMl4Ot+Qp5l/3Afk4HA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mike_M",
+    "first_name": "Mike",
+    "last_name": "Mangini",
+    "email": "Mike.Mangini@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:43.348Z",
+    "instrument": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$JXVCxf7BYp7IXn6ILncfY4$xK8wRa+bvoJI0OQHlDQkBh6eBqX1mKBBvmCVoN0lf1g=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mikael_A",
+    "first_name": "Mikael",
+    "last_name": "Akerfeldt",
+    "email": "Mikael.Akerfeldt@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:43.464Z",
+    "instrument": 6,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$9O9ZRzRQbJ6roCCvXoVKme$m0Aha79mleC1RbhJRtU6iqsjZgWX1oW76FBMnKVy7DI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Martin_M",
+    "first_name": "Martin",
+    "last_name": "Mendez",
+    "email": "Martin.Mendez@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:43.580Z",
+    "instrument": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$kR8fG0eRhOIt7QOuUVGubw$yVB9RBA7p42MyXrzVbwEN41PORt/dhTD3coan2UxPkQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Fredrik_A",
+    "first_name": "Fredrik",
+    "last_name": "Akesson",
+    "email": "Fredrik.Akesson@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:43.697Z",
+    "instrument": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$ypsgN3fEiLpINFSLBXhbzf$tvrSXdo8/Ffem6lGgsey11c0x22aaLtBZBq1k6s8Meo=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Joakim_S",
+    "first_name": "Joakim",
+    "last_name": "Svalberg",
+    "email": "Joakim.Svalberg@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:43.817Z",
+    "instrument": 5,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$kaK44P94YzYnx8Qh0ztFml$gjiSKHzljYJqeAuCpXMJf9xe8b5jVq5D7e96Osl59Yc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Waltteri_V",
+    "first_name": "Waltteri",
+    "last_name": "Vayrynen",
+    "email": "Waltteri.Vayrynen@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:43.934Z",
+    "instrument": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$2QNmb97kHhWvww8Y0z4dNH$6XZ8UPlzuHfckOa1bzA3iVQzq8S5sfJDwSIJQPBZKlc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "James_H",
+    "first_name": "James",
+    "last_name": "Hetfield",
+    "email": "James.Hetfield@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:44.050Z",
+    "instrument": 6,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$jWStGja00ZePQSrx0SGfD6$Yxpvk3wLKaLD/zu5CHr4a+JEkO6P3IvJKqrznvPRRRg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Lars_U",
+    "first_name": "Lars",
+    "last_name": "Ulrich",
+    "email": "Lars.Ulrich@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:44.166Z",
+    "instrument": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$Fj7XSL3ZrOPf1ejdd9Ge10$NMcMm4veLwgWIs9dArNsuOwaTdOAp/vJOGtz9JzZ/dQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Kirk_H",
+    "first_name": "Kirk",
+    "last_name": "Hammett",
+    "email": "Kirk.Hammett@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:44.283Z",
+    "instrument": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$WnPDuahV6wlcq6QOovRYn4$2rV+YlCWIqfjGwOT7vpZfllwOS2/Xuiayg22Vy3QjGY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Robert_T",
+    "first_name": "Robert",
+    "last_name": "Trujillo",
+    "email": "Robert.Trujillo@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:44.399Z",
+    "instrument": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$b6CWLllunAjZhoIBVrCVJw$eqVo4SlaUfROcgfYDRtaF55qfKtAykTDeSmpVnmgqZk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Adam_G",
+    "first_name": "Adam",
+    "last_name": "Grahn",
+    "email": "Adam.Grahn@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:44.516Z",
+    "instrument": 6,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$uSKx1Br55C3npaLkJW4UXk$KTN+R2j62MEUfeGuBJrSsCgGpOPiSVBhwU0U/ZaNCnY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Hannes_I",
+    "first_name": "Irengard",
+    "last_name": "Grahn",
+    "email": "Hannes.Irengard@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:44.631Z",
+    "instrument": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$FGkKBGdnmLJH4iIO3sfc4M$C4TNTLG6/oaSKkkWr/Jp/HS1xx2ioF2EnfcA7RzbB6Q=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jonas_A",
+    "first_name": "Jonas",
+    "last_name": "Almen",
+    "email": "Jonas.Almen@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:44.748Z",
+    "instrument": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$w12ucfYTS0EYpJLrXyKAbo$xpDR3WMI0hIi2IKUxofNgUaySkr0c5ayTS2aoy24Mu4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Per_A",
+    "first_name": "Per",
+    "last_name": "Andreasson",
+    "email": "Per.Andreasson@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:44.865Z",
+    "instrument": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$w9fnvog1xLWLtQ3U6LP7p1$7iws0YgYE0EHJil9c3LOFH7coUAO5OXfxywQx6lSgS8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mike_P",
+    "first_name": "Mike",
+    "last_name": "Portnoy",
+    "email": "Mike.Portnoy@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:44.983Z",
+    "instrument": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 20,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$2yiBtBu04bi3sYb511f1zw$maQfOt7zmsVNOa3B14jLXudY1ebku3oqiU3ubA94lHI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Tony_L",
+    "first_name": "Tony",
+    "last_name": "Levin",
+    "email": "Tony.Levin@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:45.099Z",
+    "instrument": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 21,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$eP1dQH7derAnRyt05iSdga$jOtYx6L3im9kORk1meatcdkLR0O4wQO+g2jG4uAUBII=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Robert_F",
+    "first_name": "Robert",
+    "last_name": "Fripp",
+    "email": "Robert.Fripp@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:45.215Z",
+    "instrument": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 22,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$8A6QPnvb03JTOOPZspkonZ$RuVt5xh6TUZbU0HIpFzxOBvDekXFo7ACEIfz6tYyynA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mel_C",
+    "first_name": "Mel",
+    "last_name": "Collins",
+    "email": "Mel.Collins@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:45.330Z",
+    "instrument": 7,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 23,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$rNZT04gXhzflSPsjArioDZ$P5ys1aKQw/LzEDi3f60hZWN7p9Ew7M/ctEE0eC46u8c=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Pat_M",
+    "first_name": "Pat",
+    "last_name": "Mastelotto",
+    "email": "Pat.Mastelotto@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:45.445Z",
+    "instrument": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$sSKYiQEyapOXmLwb3hPIZJ$LAD1gXapNRygMK0Lhxa5PLMy2lAIpnZcpBHNVb7gh3g=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Gavin_H",
+    "first_name": "Gavin",
+    "last_name": "Harrison",
+    "email": "Gavin.Harrison@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:45.561Z",
+    "instrument": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$XBPm9cOygehQhDAtEyxOLb$Kf0+1B+3I/DdOS39uxtKeshpgZWxujNIwxnMIgZ4WAI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jakko_J",
+    "first_name": "Jakko",
+    "last_name": "Jakszyk",
+    "email": "Jakko.Jakszyk@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:45.678Z",
+    "instrument": 6,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 26,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$za5pPOrr4mautgNu0lSW7x$ZM8GdYFChey9XDcMVCnhca1/82ePAYgFfhP2UhQQxIw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Jeremy_S",
+    "first_name": "Jeremy",
+    "last_name": "Stacey",
+    "email": "Jeremy.Stacey@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:45.795Z",
+    "instrument": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 27,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$ZPQsEdK1cr8EIqs12VM4uM$5EX1KJKB8WW2Em4Upbc0bL1WCg/IUUHZOa09dpCd5mY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Rudolf_S",
+    "first_name": "Rudolf",
+    "last_name": "Schenker",
+    "email": "Rudolf.Schenker@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:45.912Z",
+    "instrument": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$udzJh9WzL1mGObYW9ayckn$5SWtUqb1IMG8mInJWRIAsBLwzvlzbYODlQuhvDeoxO8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Klaus_M",
+    "first_name": "Klaus",
+    "last_name": "Meine",
+    "email": "Klaus.Meine@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:46.028Z",
+    "instrument": 3,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 29,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$ssEJQtWqLSpbF5z9v6rvZT$FskKi4cLbccVmbiK/rtU2s/tmZXHxc47ByyipBCN/YU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Matthias_J",
+    "first_name": "Matthias",
+    "last_name": "Jabs",
+    "email": "Matthias.Jabs@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:46.143Z",
+    "instrument": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 30,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$OVSGTKNh0GAwKcGpgymR5F$2Ze78gAuzmZljkiK5VCjcLibD+Cs97LFDkLUGKS3uqQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Pawel_M",
+    "first_name": "Pawel",
+    "last_name": "Maciwoda",
+    "email": "Pawel.Maciwoda@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:46.259Z",
+    "instrument": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.musician",
+  "pk": 31,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$r51LX9W6DU4WADn8hYLiq7$TY4uRF4PngDx15l+4w0HDabG+JF/dI7bVi7vFx3sIAw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Mikkey_D",
+    "first_name": "Mikkey",
+    "last_name": "Dee",
+    "email": "Mikkey.Dee@music.world",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-08-14T14:51:46.374Z",
+    "instrument": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "catalog.band",
+  "pk": 1,
+  "fields": {
+    "name": "Dream Theater",
+    "description": "Dream Theater is an American progressive metal band formed in 1985 under the name Majesty by John Petrucci, John Myung and Mike Portnoy while they attended Berklee College of Music in Boston, Massachusetts.",
+    "country": 1,
+    "genres": [
+      1,
+      2
+    ],
+    "members": [
+      3,
+      2,
+      4,
+      5,
+      1
+    ]
+  }
+},
+{
+  "model": "catalog.band",
+  "pk": 2,
+  "fields": {
+    "name": "Opeth",
+    "description": "Opeth are a Swedish progressive metal band from Stockholm, formed in 1990. In addition to progressive metal, the band incorporates folk, blues, classical, and jazz elements into its usually lengthy compositions, as well as strong influences from death metal, especially in their early works. Songs may include acoustic guitar passages, Mellotrons, death growls, and strong dynamic shifts. The band rarely made live appearances supporting their first four albums, but since their first world tour in support of the 2001 album Blackwater Park, they have had several other major world tours. The group have been through several personnel changes since early in their history, including the replacement of every original member. Lead vocalist, guitarist and primary songwriter Mikael Akerfeldt has been Opeth's driving force since the departure of founder and lead vocalist David Isberg in 1992. ",
+    "country": 2,
+    "genres": [
+      6,
+      1,
+      2
+    ],
+    "members": [
+      8,
+      9,
+      7,
+      6,
+      10
+    ]
+  }
+},
+{
+  "model": "catalog.band",
+  "pk": 3,
+  "fields": {
+    "name": "Metallica",
+    "description": "Metallica is an American heavy metal band. The band was formed in 1981 in Los Angeles by vocalist and guitarist James Hetfield and drummer Lars Ulrich, and has been based in San Francisco for most of its career. The band's fast tempos, instrumentals and aggressive musicianship made them one of the founding 'big four' bands of thrash metal, alongside Megadeth, Anthrax and Slayer. Metallica's current lineup comprises founding members and primary songwriters Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo. Guitarist Dave Mustaine, who formed Megadeth after being fired from Metallica, and bassists Ron McGovney, Cliff Burton and Jason Newsted are former members of the band. ",
+    "country": 1,
+    "genres": [
+      10,
+      7,
+      9,
+      8
+    ],
+    "members": [
+      11,
+      13,
+      12,
+      14
+    ]
+  }
+},
+{
+  "model": "catalog.band",
+  "pk": 4,
+  "fields": {
+    "name": "Royal Republic",
+    "description": "Royal Republic is a Swedish rock band from Malmo. The band is currently signed to Universal Music and managed by Odyssey Music Network.",
+    "country": 2,
+    "genres": [
+      11,
+      13,
+      10,
+      12
+    ],
+    "members": [
+      15,
+      16,
+      17,
+      18
+    ]
+  }
+},
+{
+  "model": "catalog.band",
+  "pk": 5,
+  "fields": {
+    "name": "Liquid Tension Experiment",
+    "description": "Liquid Tension Experiment (LTE) is an American instrumental progressive metal supergroup, founded by Mike Portnoy, then Dream Theater's drummer, in 1997. The band has released two albums through Magna Carta Records. An extension of their second regular album, with the absence of John Petrucci was released in 2007 under the name 'Liquid Trio Experiment'. A live album with the absence of Jordan Rudess (mostly) was released in 2009 under the name 'Liquid Trio Experiment 2'. Three live albums and two videos were released in 2009 by the complete band. ",
+    "country": 1,
+    "genres": [
+      3,
+      1,
+      2
+    ],
+    "members": [
+      4,
+      19,
+      20,
+      1
+    ]
+  }
+},
+{
+  "model": "catalog.band",
+  "pk": 6,
+  "fields": {
+    "name": "King Crimson",
+    "description": "King Crimson were a progressive rock band formed in 1968 in London, England. The band drew inspiration from a wide variety of music, incorporating elements of classical, jazz, folk, heavy metal, gamelan, industrial, electronic, experimental music and new wave. They exerted a strong influence on the early 1970s progressive rock movement, including on contemporaries such as Yes and Genesis, and continue to inspire subsequent generations of artists across multiple genres. The band earned a large cult following.",
+    "country": 3,
+    "genres": [
+      4,
+      5,
+      2
+    ],
+    "members": [
+      24,
+      25,
+      26,
+      22,
+      23,
+      21,
+      20
+    ]
+  }
+},
+{
+  "model": "catalog.band",
+  "pk": 7,
+  "fields": {
+    "name": "Scorpions",
+    "description": "Scorpions are a German rock band formed in Hanover in 1965 by guitarist Rudolf Schenker. Since the band's inception, its musical style has ranged from hard rock, heavy metal and glam metal to soft rock. The lineup from 1978 to 1992 was the most successful incarnation of the group, and included Klaus Meine (vocals), Rudolf Schenker (rhythm guitar), Matthias Jabs (lead guitar), Francis Buchholz (bass), and Herman Rarebell (drums). The band's only continuous member has been Schenker, although Meine has appeared on all of Scorpions' studio albums, while Jabs has been a consistent member since 1978, and bassist Pawel Maciwoda and drummer Mikkey Dee have been in the band since 2003 and 2016 respectively.",
+    "country": 4,
+    "genres": [
+      14,
+      10,
+      7
+    ],
+    "members": [
+      28,
+      29,
+      31,
+      30,
+      27
+    ]
+  }
+}
+]

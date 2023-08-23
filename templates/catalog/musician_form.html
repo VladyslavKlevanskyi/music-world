@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block title %} {{ object|yesno:"Update,Create" }} musician {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+  <link href="{{ ASSETS_ROOT }}/css/custom-styles.css" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+
+	<section class="header-2">
+    <div class="page-header-lists section-height-30 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved.jpg')">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-7 text-center mx-auto mt-7">
+            <h1 class="text-white pt-3">
+              {{ object|yesno:"Update,Create" }} musician
+            </h1>
+          </div>
+        </div>
+
+      </div>
+
+        {% block waves %}
+          {% include "includes/waves.html" %}
+        {% endblock %}
+
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mx-auto">
+          <form action="" method="post" novalidate>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Submit" class="btn btn-sm bg-gradient-primary">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}
