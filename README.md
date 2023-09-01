@@ -5,6 +5,10 @@ Project for managing local music band library
 
 [Music world project deployed to Render](https://music-world-gg23.onrender.com/)
 
+On the login page enter:
+* Username - `dark`
+* Password - `1QaZxCdE3`
+
 # Introduction
 
 The goal of the project is to learn django by creating a simple library of music bands.
